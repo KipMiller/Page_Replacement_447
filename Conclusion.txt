@@ -1,0 +1,273 @@
+Chris Miller 
+12/3/2019
+CSCI 447
+
+			Conclusion: Homework 4
+			
+		We will start the conclusion with the tallying 
+	of each of the algorithms and their different parameters:
+
+======================================
+Algorithm: LRU Timestamp
+Number of frames: 8
+Total memory accesses: 1000000
+Total page faults: 205368
+======================================
+Algorithm: LRU Counter
+Number of frames: 8
+Period: 25
+Total memory accesses: 1000000
+Total page faults: 218477
+======================================
+Algorithm: Second Chance
+Number of frames: 8
+Total memory accesses: 1000000
+Total page faults: 171507
+======================================
+Algorithm: Optimal
+Number of frames: 8
+Total memory accesses: 1000000
+Total page faults: 120795
+======================================
+
+======================================
+Algorithm: LRU Timestamp
+Number of frames: 16
+Total memory accesses: 1000000
+Total page faults: 138539
+======================================
+Algorithm: LRU Counter
+Number of frames: 16
+Period: 25
+Total memory accesses: 1000000
+Total page faults: 213448
+======================================
+Algorithm: Second Chance
+Number of frames: 16
+Total memory accesses: 1000000
+Total page faults: 116373
+======================================
+Algorithm: Optimal
+Number of frames: 16
+Total memory accesses: 1000000
+Total page faults: 81829
+======================================
+
+======================================
+Algorithm: LRU Timestamp
+Number of frames: 32
+Total memory accesses: 1000000
+Total page faults: 98067
+======================================
+Algorithm: LRU Counter
+Number of frames: 32
+Period: 25
+Total memory accesses: 1000000
+Total page faults: 196668
+======================================
+Algorithm: Second Chance
+Number of frames: 32
+Total memory accesses: 1000000
+Total page faults: 84159
+======================================
+Algorithm: Optimal
+Number of frames: 32
+Total memory accesses: 1000000
+Total page faults: 63336
+======================================
+
+======================================
+Algorithm: LRU Timestamp
+Number of frames: 64
+Total memory accesses: 1000000
+Total page faults: 70315
+======================================
+Algorithm: LRU Counter
+Number of frames: 64
+Period: 25
+Total memory accesses: 1000000
+Total page faults: 184889
+======================================
+Algorithm: Second Chance
+Number of frames: 64
+Total memory accesses: 1000000
+Total page faults: 58128
+======================================
+Algorithm: Optimal
+Number of frames: 64
+Total memory accesses: 1000000
+Total page faults: 60292
+======================================
+
+		Now we will be examining only the LRU Counter algorithm with the combinations of 
+	each frame size along with periods from 25 to 1600:
+	
+======================================
+Algorithm: LRU Counter
+Number of frames: 8
+Period: 25
+Total memory accesses: 1000000
+Total page faults: 218477
+======================================
+
+======================================
+Algorithm: LRU Counter
+Number of frames: 16
+Period: 25
+Total memory accesses: 1000000
+Total page faults: 213448
+======================================
+
+======================================
+Algorithm: LRU Counter
+Number of frames: 32
+Period: 25
+Total memory accesses: 1000000
+Total page faults: 196668
+======================================
+
+======================================
+Algorithm: LRU Counter
+Number of frames: 64
+Period: 25
+Total memory accesses: 1000000
+Total page faults: 184889
+======================================
+
+======================================
+Algorithm: LRU Counter
+Number of frames: 16
+Period: 50
+Total memory accesses: 1000000
+Total page faults: 183724
+======================================
+
+======================================
+Algorithm: LRU Counter
+Number of frames: 16
+Period: 100
+Total memory accesses: 1000000
+Total page faults: 164749
+======================================
+
+======================================
+Algorithm: LRU Counter
+Number of frames: 16
+Period: 200
+Total memory accesses: 1000000
+Total page faults: 150378
+======================================
+
+======================================
+Algorithm: LRU Counter
+Number of frames: 16
+Period: 400
+Total memory accesses: 1000000
+Total page faults: 150609
+======================================
+
+======================================
+Algorithm: LRU Counter
+Number of frames: 16
+Period: 800
+Total memory accesses: 1000000
+Total page faults: 168914
+======================================
+
+======================================
+Algorithm: LRU Counter
+Number of frames: 16
+Period: 1600
+Total memory accesses: 1000000
+Total page faults: 213644
+======================================
+
+		Now we will look for the optimal period/frame combination based 
+	on the trends we have seen in this data:
+	
+======================================
+Algorithm: LRU Counter
+Number of frames: 8
+Period: 100
+Total memory accesses: 1000000
+Total page faults: 192722
+======================================
+
+======================================
+Algorithm: LRU Counter
+Number of frames: 32
+Period: 100
+Total memory accesses: 1000000
+Total page faults: 156017
+======================================
+
+======================================
+Algorithm: LRU Counter
+Number of frames: 64
+Period: 100
+Total memory accesses: 1000000
+Total page faults: 152759
+======================================
+
+======================================
+Algorithm: LRU Counter
+Number of frames: 64
+Period: 200
+Total memory accesses: 1000000
+Total page faults: 133194
+======================================
+
+======================================
+Algorithm: LRU Counter
+Number of frames: 64
+Period: 400
+Total memory accesses: 1000000
+Total page faults: 117756
+======================================
+
+======================================
+Algorithm: LRU Counter
+Number of frames: 64
+Period: 800
+Total memory accesses: 1000000
+Total page faults: 101072
+======================================
+
+======================================
+Algorithm: LRU Counter
+Number of frames: 64
+Period: 1600
+Total memory accesses: 1000000
+Total page faults: 85962
+======================================
+
+
+		Based on the trends we've seen in the increasing frames and 
+	periods, we can conclude that the best LRU combination would be 
+	a table of size 64 frames and a period of 1600, though there would 
+	be diminishing returns after a certain point of increasing periods.
+	
+	The worst algorithm would be LRU Counter with: 
+		
+======================================
+Algorithm: LRU Counter
+Number of frames: 8
+Period: 1600
+Total memory accesses: 1000000
+Total page faults: 348889
+======================================
+
+	
+		The best algorithm would be Optimal with the parameters of 64
+	frames, as across all of the runs of the algorithms, we never encountered
+	any lower results than it. Which of course makes sense, as optimal is the 
+	optimal algorithm, but not practical as we would need to look ahead for it 
+	to be efficient. 
+	
+======================================
+Algorithm: Optimal
+Number of frames: 64
+Total memory accesses: 1000000
+Total page faults: 60292
+======================================
+
